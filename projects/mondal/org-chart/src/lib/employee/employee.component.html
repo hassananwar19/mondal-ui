@@ -4,8 +4,8 @@
   <div *ngIf="employee?.imageUrl" class="mui-oc-image mui-oc-border"
     [ngStyle]="{ 'background-image': 'url(\''+ employee?.imageUrl+'\')'}"></div>
   <div>
-    <div class="mui-oc-name">{{employee?.name}}</div>
     <div class="mui-oc-designation">{{employee?.designation}}</div>
+    <div class="mui-oc-name" [innerHTML]="employee?.name"></div>
   </div>
 </div>
 <div ngClass="mui-oc-connector-{{direction}}" class="mui-oc-border" *ngIf="employee?.subordinates?.length"></div>
